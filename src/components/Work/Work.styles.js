@@ -1,40 +1,63 @@
 import styled from "styled-components";
+
 export const Wrapper = styled.div`
-  background-color: var(--white);
+  background-color: #ffffff;
+
+  padding-bottom: 64px;
 `;
 
 export const Content = styled.div`
-  padding: 20px;
+  padding-top: 20px;
   max-width: var(--maxWidth);
   margin: 0 auto;
-`;
 
-export const Text = styled.div`
-  position: relative;
-  font-family: "Poppins", sans-serif;
   text-align: center;
-  animation: slide-top 1s;
-  @keyframes slide-top {
-    0% {
-      -webkit-transform: translateY(100px);
-      transform: translateY(100px);
-    }
-    100% {
-      -webkit-transform: translateY(0px);
-      transform: translateY(0px);
+  h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: var(--fontSuperBig);
+    margin: 0;
+    color: var(--brown);
+    @media screen and (max-width: 720px) {
+      font-size: var(--fontBig);
     }
   }
+  p {
+    font-family: "Montserrat", sans-serif;
+    padding: 15px;
+    font-weight: 600;
+    font-size: var(--fontBig);
+    @media screen and (max-width: 720px) {
+      font-size: var(--fontMed);
+    }
+  }
+`;
+export const CardWrapper = styled.div`
+  overflow: hidden;
+  padding: 0 0 32px;
+  margin: 0px 24px 24px;
+  background: var(--white);
+  width: 700px;
+  z-index: 1;
+  box-shadow: 0px 12px 18px -6px rgb(0 0 0 / 30%);
+  border-radius: 40px;
+`;
+export const Text = styled.div`
+  margin: auto;
+  width: 50%;
+  padding: 10px;
 
   h1 {
-    font-size: var(--fontSuperBig);
+    font-size: 3rem;
+    font-weight: 700;
     color: var(--black);
+    text-align: center;
     @media screen and (max-width: 720px) {
       font-size: var(--fontBig);
     }
   }
   p {
     font-size: var(--fontMed);
-
+    font-weight: 700;
     @media screen and (max-width: 720px) {
       font-size: var(--fontSmall);
     }
@@ -44,67 +67,16 @@ export const Text = styled.div`
     max-width: 100%;
   }
 `;
-export const CardWrapper = styled.div`
-  overflow: hidden;
-  padding: 0 0 32px;
-  margin: 0px 24px 24px;
-  font-family: "Poppins", sans-serif;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05), 0 0px 40px rgba(0, 0, 0, 0.08);
-  border-radius: 35px;
 
-  background-color: var(--white);
-`;
-export const Overlay = styled.div`
-  position: absolute;
-  bottom: 40px;
-  left: 35px;
-`;
-export const Page = styled.img`
-  display: block;
-  height: auto;
-  width: 100%;
-  margin: auto;
-  padding: 0px 30px;
-`;
-export const Tec = styled.a`
-  opacity: 60%;
-  display: inline-block;
-  height: auto;
-  background-color: var(--white);
-  color: var(--black);
-  font-family: "Poppins", sans-serif;
-  width: 80px;
-  padding: 12px 0;
-  font-family: inherit;
-  font-size: 14px;
-  font-weight: 700;
-  border: 0;
-  border-radius: 35px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.08);
-  cursor: pointer;
-  transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
-  text-decoration: none;
-  margin: 5px;
-  text-align: center;
-  &:hover {
-    transform: scale(1.1);
-    transition-timing-function: ease-in-out;
-  }
-  @media screen and (max-width: 720px) {
-    font-size: 10px;
-    width: 60px;
-  }
-`;
 export const CardHeader = styled.header`
+  padding-top: 32px;
   padding-bottom: 32px;
-  width: 100%;
-  position: relative;
-  display: inline-block;
 `;
 export const CardHeading = styled.h1`
-  font-family: "Poppins", sans-serif;
   text-align: center;
-  position: relative;
+  color: var(--black);
+  font-size: var(--fontBig);
+  font-family: "Poppins", sans-serif;
 `;
 
 export const CardBody = styled.div`
@@ -134,37 +106,39 @@ export const CardFieldset = styled.fieldset`
 export const CardOptionsNote = styled.small`
   padding-top: 8px;
   display: block;
-  font-family: "Poppins", sans-serif;
-  width: 100%;
-  font-size: var(--smallFont);
-  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  max-width: 400px;
+  font-size: var(--fontMed);
+  text-align: left;
+  margin: auto;
 `;
 
-export const CardButton = styled.a`
+export const Page = styled.img`
   display: block;
+  height: auto;
+  width: 100%;
+  margin: auto;
+  padding: 0px 30px;
+  @media screen and (max-width: 720px) {
+    width: 100%;
+  }
+`;
+
+export const LogoN = styled.img`
+  width: 50px;
+`;
+export const Men = styled.a`
+  font-weight: 700;
+  display: block;
+  margin: 20px auto;
   width: 300px;
   padding: 12px 0;
-  font-family: inherit;
-  font-size: 14px;
-  font-weight: 700;
-  color: #fff;
-  background-color: var(--green);
-  border: 0;
-  border-radius: 35px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.08);
-  cursor: pointer;
-  transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+  font-size: var(--fontMed);
   text-decoration: none;
-  margin: auto;
-  &:hover {
-    transform: scale(1.3);
-    transition-timing-function: ease-in-out;
-    animation-duration: 1s;
-    background-color: var(--black);
-    color: var(--green);
-  }
-
-  @media screen and (max-width: 452px) {
-    width: auto;
+  color: var(--black);
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  :hover {
+    text-decoration: underline;
   }
 `;
