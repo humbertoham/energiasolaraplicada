@@ -13,8 +13,10 @@ const Contact = () => {
         <Con className="ptp">
           <h1>
             <FontAwesomeIcon className="email" size="2x" icon={faEnvelope} />
-            Email: ???
+            Emails: contacto@energiasolaraplicada.net
           </h1>
+          <h1>ventas@energiasolaraplicada.net</h1>
+          <h1>soportetecnico@energiasolaraplicada.net</h1>
         </Con>
         <Con>
           <h1>
